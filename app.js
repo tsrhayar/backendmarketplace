@@ -31,6 +31,10 @@ app.use("/product", productRouter);
 const categoryRouter = require("./routes/Category");
 app.use("/category", categoryRouter);
 
-app.listen(5000, () => {
+
+const port = process.env.PORT || 5000;
+
+app.listen(port, () => {
   console.log("express server started");
 });
+
